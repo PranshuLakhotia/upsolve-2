@@ -187,6 +187,10 @@ const handleCodeChange = (e) => {
     setExtraLoading(false);
   };
 
+  const f = async ()=>{
+    
+  }
+
   // Add new test case to main test cases
   const addTestCase = () => {
     setTestCases([...testCases, { input: '', expectedOutput: '', output: '' }]);
@@ -237,7 +241,7 @@ const generateCodeFromGemini = useCallback(
     setCode(currentCode);
     console.log(currentCode);
     try {
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCNng2kz2XK4gy7_33GYccdtBDKl7IbGuc', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCiATvRZXPHJrNnJnTzxc3cvOOAMPcBl_o', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
